@@ -1,0 +1,66 @@
+# GIT Cheat Sheet
+
+Recetas GIT
+
+## Obtener ayuda
+
+### Ayuda del manual
+
+Para obtener ayuda del manual sobre el comando `config`:
+
+```bash
+$ git help config
+```
+
+Para obtener ayuda del manual sobre el comando `add`:
+
+```bash
+$ git help add
+```
+
+### Ayuda breve de la lína de comandos
+
+Para obtener ayuda breve sobre el comando `config`:
+
+```bash
+$ git config -h
+```
+Para obtener ayuda breve sobre el comando `add`:
+
+```bash
+$ git add -h
+```
+
+## Configuración
+
+Git viene con una herramienta llamada `git config` que permite obtener y configurar variables de configuración que controlan
+todos los aspectos de cómo se ve y funciona Git. En Windows, estas variables quedan almacenadas en tres lugares diferentes:
+
+Archivo|Impacto|Opcion
+-------|--------|-----
+`C:\Program Files\Git\mingw64\etc\gitconfig`|Todos los repositorios|`--system`
+`c:\users\$user\\.gitconfig`|Repositorios del Usuario| `--global`
+`.git\\.gitconfig`|Repositorio del proyecto| `--local`
+
+Para configurar el usuario y correo a utilizar en todos nuestros proyectos:
+
+```bash
+$ git config --global user.name "Fernando Garcia"
+$ git config --global user.email fmgarcia@uade.edu.ar
+```
+
+Para ver qué opciones tenemos configuradas
+
+```bash
+$ git config --list
+```
+
+Para ver qué opciones tenemos configuradas y en qué arhivos:
+
+```bash
+git config --list --show-origin
+```
+## Información adicional
+
+- [Documentación completa](https://git-scm.com/doc) (incluye libros y videos en inglés).
+- [Libro Pro Git](https://git-scm.com/book/es/v2) (en español)
